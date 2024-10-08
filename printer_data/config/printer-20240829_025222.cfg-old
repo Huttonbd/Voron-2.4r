@@ -1,6 +1,3 @@
-[include mmu/base/*.cfg]
-[include mmu/optional/client_macros.cfg]
-[include mmu/optional/mmu_ercf_compat.cfg]
 ## Current loaded printer.cfg
 # This file contains common pin mappings for the BigTreeTech Octopus V1.
 # To use this config, the firmware should be compiled for the STM32F446 with a "32KiB bootloader"
@@ -752,7 +749,6 @@ gcode:
     Smart_Park                    ; KAMP Smart Park
     STATUS_HEATING
     M109 S{target_extruder}       ; Heats the nozzle to printing
-    MMU_START_LOAD_INITIAL_TOOL
     STATUS_BUSY
     Line_Purge                    ; Adaptive Purge
     G1 Z20 F3000                  ; Move Nozzle Away From Bed
@@ -825,6 +821,6 @@ gcode:
 #*#
 #*# [input_shaper]
 #*# shaper_type_x = mzv
-#*# shaper_freq_x = 52.0
+#*# shaper_freq_x = 53.0
 #*# shaper_type_y = zv
 #*# shaper_freq_y = 40.0
